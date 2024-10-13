@@ -1,1 +1,72 @@
 /*  your css code here. If applicable */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.hero {
+  display: flex;                /* Flexbox to align content and image */
+  justify-content: space-between; /* Space between the text and image */
+  align-items: center;           /* Center content vertically */
+  padding: 20px;
+  height: 100vh;                 /* Full viewport height */
+  background-color: #f8f9fa;     /* Light background */
+}
+
+.hero-content {
+  max-width: 50%;                /* Limits the width of the content */
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.explore-button {
+  display: inline-block;
+  padding: 15px 30px;            /* Padding for the button */
+  background-color: #3498db;     /* Button background color */
+  color: white;                  /* Button text color */
+  border-radius: 5px;            /* Rounded corners */
+  text-decoration: none;         /* No underline for link */
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.explore-button:hover {
+  background-color: #2980b9;     /* Darker color on hover */
+}
+
+.hero-image {
+  width: 50%;                    /* Image takes 50% of container */
+  height: 100%;                  /* Full height of hero section */
+  object-fit: cover;             /* Ensures the image covers the container */
+  border-radius: 10px;           /* Optional: Adds a slight rounding to the image corners */
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;      /* Stack image and content vertically on smaller screens */
+    text-align: center;
+  }
+
+  .hero-content, .hero-image {
+    width: 100%;                 /* Full width for both image and content */
+  }
+
+  .hero-image {
+    height: 300px;               /* Adjust height for smaller screens */
+  }
+}
